@@ -14,6 +14,7 @@ class UserDetail extends Component {
       match: { params }
     } = this.props;
     UserServices(null, `/user/${params.id}`, "GET").then(response => {
+      console.log(response);
       this.setState({
         user: response.data
       });
